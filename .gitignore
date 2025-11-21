@@ -11,7 +11,7 @@
 /bin/.tmp
 /bin/neutralino-*
 /bin/resources.neu
-/bin/resources/js/neutralino.*
+#/bin/resources/js/neutralino.*
 /build_linux
 /build_win
 
