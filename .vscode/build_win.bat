@@ -8,7 +8,7 @@ if "%CONFIG%"=="" set CONFIG=Debug
 rem Inizializza l'ambiente di Visual Studio (adatta il path se serve)
 call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\vsdevcmd.bat" -arch=x64 -host_arch=x64
 
-set BUILD_DIR=build_win
+set BUILD_DIR=build
 
 rem if exist "%BUILD_DIR%" rmdir /S /Q "%BUILD_DIR%"
 mkdir "%BUILD_DIR%"

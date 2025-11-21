@@ -7,7 +7,7 @@ if [ -z "$CONFIG" ]; then
     CONFIG="Debug"
 fi
 
-BUILD_DIR="build_linux"
+BUILD_DIR="build"
 
 #rm -rf "$BUILD_DIR"
 mkdir -p "$BUILD_DIR"
