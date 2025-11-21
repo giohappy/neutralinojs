@@ -188,6 +188,15 @@ if(UNIX AND NOT APPLE)
     pkg_check_modules(XRANDR REQUIRED xrandr)
     pkg_check_modules(XCB REQUIRED xcb)
 
+    # 👉 Questa parte era quella mancante: aggiungo le include di GTK/GLib/X11/…
+    include_directories(
+        ${GTK_INCLUDE_DIRS}
+        ${GLIB_INCLUDE_DIRS}
+        ${X11_INCLUDE_DIRS}
+        ${XRANDR_INCLUDE_DIRS}
+        ${XCB_INCLUDE_DIRS}
+    )
+
     add_executable(neutralino-linux_x64
         ${SOURCES_COMMON}
         ${SOURCES_LINUX}

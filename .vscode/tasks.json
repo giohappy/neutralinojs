@@ -10,15 +10,14 @@
             "type": "shell",
             "command": "echo Unsupported OS",
             "windows": {
-                "command": "if exist build_win rmdir /S /Q build_win && mkdir build_win && cd build_win && cmake -G \"NMake Makefiles\" -DCMAKE_BUILD_TYPE=Debug .. && nmake"
+                "command": ".vscode\\build_win.bat"
             },
             "linux": {
-                "command": "rm -rf build_linux && mkdir build_linux && cd build_linux && cmake -DCMAKE_BUILD_TYPE=Debug .. && make -j$(nproc)"
+                "command": "chmod +x .vscode/build_linux.sh && .vscode/build_linux.sh"
             },
             "options": { "cwd": "${workspaceFolder}" },
             "group": "build"
         },
-
         // ===========================================
         //                BUILD RELEASE
         // ===========================================
@@ -27,10 +26,10 @@
             "type": "shell",
             "command": "echo Unsupported OS",
             "windows": {
-                "command": "if exist build_win rmdir /S /Q build_win && mkdir build_win && cd build_win && cmake -G \"NMake Makefiles\" -DCMAKE_BUILD_TYPE=Release .. && nmake"
+                "command": ".vscode\\build_win.bat"
             },
             "linux": {
-                "command": "rm -rf build_linux && mkdir build_linux && cd build_linux && cmake -DCMAKE_BUILD_TYPE=Release .. && make -j$(nproc)"
+                "command": "chmod +x .vscode/build_linux.sh && .vscode/build_linux.sh Release"
             },
             "options": { "cwd": "${workspaceFolder}" },
             "group": "build"
