@@ -1,0 +1,54 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Neutralino (Linux)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/neutralino-linux_x64",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build Debug"
+        },
+        {
+            "name": "Debug Neutralino (Windows x64)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/neutralino-win_x64.exe",
+            "cwd": "${workspaceFolder}/bin",
+            "args": [],
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "environment": [
+                { "name": "PATH", "value": "${env:PATH}" }
+            ],
+            "symbolSearchPath": "${workspaceFolder}/bin;${workspaceFolder}/build",
+            "visualizerFile": "${workspaceFolder}/.vscode/debug.natvis",
+            "preLaunchTask": "Build Debug"
+        },
+        {
+            "name": "Run bz.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/bz.py",
+            "console": "integratedTerminal",
+            "args": ["--target_arch", "x64", "--verbose"]
+        }
+    ]
+}

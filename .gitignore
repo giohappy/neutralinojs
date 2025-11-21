@@ -1,6 +1,5 @@
 # Developer tools' files
 .lite_workspace.lua
-.vscode
 
 # Neutralinojs-related files
 .storage
@@ -13,6 +12,7 @@
 /bin/neutralino-*
 /bin/resources.neu
 /bin/resources/js/neutralino.*
+/build
 
 # Platform specific 
 Thumbs.db
